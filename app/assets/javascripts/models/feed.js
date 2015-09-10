@@ -14,5 +14,9 @@ NewsReader.Models.Feed = Backbone.Model.extend({
     }
 
     return response;
+  },
+
+  toJSON: function() {
+    return {feed: _.clone(this.attributes)};
   }
 })
