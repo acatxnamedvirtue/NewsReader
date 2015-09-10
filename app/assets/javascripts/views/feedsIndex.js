@@ -1,11 +1,10 @@
 NewsReader.Views.FeedsIndex = Backbone.CompositeView.extend({
   template: JST['feeds/feedsIndex'],
-  events: {
-    'click .delete' : 'delete'
-  },
+  events: {},
 
   initialize: function (options) {
     this.listenTo(this.collection, 'sync', this.render);
+    this.listenTo(this.collection, 'remove', this.delete)
   },
 
   render: function () {
@@ -18,5 +17,9 @@ NewsReader.Views.FeedsIndex = Backbone.CompositeView.extend({
 
     }.bind(this));
     return this;
+  },
+
+  delete: function(model) {
+    this.removeModelSubview(this.$el.find(".feeds"), model);
   }
 });

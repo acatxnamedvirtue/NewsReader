@@ -6,15 +6,14 @@ NewsReader.Views.FeedsIndexItem = Backbone.CompositeView.extend({
   },
 
   render: function() {
-    var content =this.template({feed: this.model});
+    var content = this.template({feed: this.model});
     this.$el.html(content);
 
     return this;
   },
 
   delete: function(e){
-    e.preventDefault();
+    e.preventDefault()
     this.model.destroy();
-    this.remove();
   }
 });
