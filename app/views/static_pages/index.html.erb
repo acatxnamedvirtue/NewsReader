@@ -1,4 +1,11 @@
 <h1>Hello World</h1>
+<% if !current_user  %>
+  <a href="#/session/new">Sign In</a>
+  <a href="#/users/new">Sign Up</a>
+<% else %>
+  <a href="#/session/destroy">Sign Out</a>
+<% end %>
+
 <a href="#/">Back to Index</a>
 <div id='content'></div>
 

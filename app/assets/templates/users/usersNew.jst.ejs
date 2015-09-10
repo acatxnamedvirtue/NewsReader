@@ -1,0 +1,9 @@
+<h1>Sign Up</h1>
+
+<ul class="errors"></ul>
+
+<label for="user_username">Username:</label>
+<input id="user_username" type="text" name="user[username]" value="<%= user.escape('username') %>"> <br><br>
+<label for="user_password">Password:</label>
+<input id="user_password" type="password" name="user[password]" value=""><br>
+<input type="submit">
