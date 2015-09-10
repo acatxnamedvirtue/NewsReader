@@ -1,5 +1,5 @@
 <h1>Feed Index</h1>
 
 <% feeds.each(function(feed) { %>
-  <li><%= feed.escape('title') %></li>
+  <li><a href="#/feeds/<%= feed.id  %>"><%= feed.escape('title') %></a></li>
 <% }) %>
